@@ -31,7 +31,7 @@ function takePhoto() {
 	const data = canvas.toDataURL('image/jpeg');
 	const link = document.createElement('a');
 	link.href = data;
-	link.setAttribute('download', 'image title);
+	link.setAttribute('download', 'image title');
 	link.textContent = 'Download Image';
 	strip.insertBefore(link, strip.firstChild);
 }
