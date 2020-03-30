@@ -3,6 +3,7 @@ const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
 const strip = document.querySelector('.strip');
 const snap = document.querySelector('.snap');
+const takePhotoButton = document.querySelector('.take-photo');
 
 function getVideo() {
 	navigator.mediaDevices.getUserMedia({ video: true, audio: false }) //it returns a promise
@@ -32,10 +33,11 @@ function takePhoto() {
 	const link = document.createElement('a');
 	link.href = data;
 	link.setAttribute('download', 'image title');
-	link.textContent = 'Download Image';
+	link.innerHTML = `<img src="${data}" alt="some text" />`
 	strip.insertBefore(link, strip.firstChild);
 }
 
 getVideo();
 
 video.addEventListener('canplay', paintToCanvas);
+takePhotoButton.addEventListener('click', takePhoto);
