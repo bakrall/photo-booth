@@ -4,7 +4,7 @@
   "description": "Based on Wes Bos's tutorial from javascript30.com - Webcam Fun",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
